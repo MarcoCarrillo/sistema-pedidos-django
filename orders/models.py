@@ -9,7 +9,7 @@ class Order(models.Model):
     table = models.ForeignKey('tables.Table', on_delete=models.SET_NULL, null=True, blank=True)
     product = models.ForeignKey('products.Product', on_delete=models.SET_NULL, null=True, blank=True)
     status = models.CharField(max_length=255, choices= StatusEnum)
-    created_at = models.DateField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     close = models.BooleanField(default=False)
 
     def __str__(self):
