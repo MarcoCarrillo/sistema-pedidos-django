@@ -1,6 +1,4 @@
 from distutils.command.upload import upload
-from tkinter import CASCADE
-from unicodedata import category
 from django.db import models
 
 class Product(models.Model):
