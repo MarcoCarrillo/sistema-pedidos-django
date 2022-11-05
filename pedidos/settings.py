@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import datetime
 import os
 from pathlib import Path
+import cloudinary_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,8 +27,8 @@ SECRET_KEY = 'django-insecure-*)370wc4#!ukp2#ir#%+@7*-p=441)3p_++rfm&uc0v(ojh6cb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-# ALLOWED_HOSTS = ['localhost']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost']
+# ALLOWED_HOSTS = ['sistema-pedidos-tiburoneros.netlify.app/']
 
 
 # Application definition
@@ -48,7 +49,8 @@ INSTALLED_APPS = [
     'products',
     'tables',
     'orders',
-    'payments'
+    'payments',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -165,3 +167,11 @@ STATICFILES_DIRS = (
 )
 
 STATIC_FILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dfusrtqlq',
+    'API_KEY': '918176188852354',
+    'API_SECRET': 'FZbuj5W-UTJYSHMVRilGZc-KI0c'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
