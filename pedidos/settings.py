@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-*)370wc4#!ukp2#ir#%+@7*-p=441)3p_++rfm&uc0v(ojh6cb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['sistema-pedidos-tiburoneros.netlify.app/']
 
 
